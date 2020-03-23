@@ -4,6 +4,13 @@ A set of neomorphic design based widgets.
 
 # How to use ?
 
+## Import it in your pubspec.yaml
+```yaml
+neomorphic_design:
+  git:
+    url: git@github.com:jenjiskan/neomorphic-design-package.git
+```
+
 ## Initialize Neomorphic theme in your main function
 ```dart
 void main() {
