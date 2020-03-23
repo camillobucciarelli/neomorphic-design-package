@@ -20,12 +20,11 @@ class NeomorphicCheckbox extends StatefulWidget {
   final Color checkedColor;
   final Color uncheckedColor;
   final Duration checkAnimationDuration;
-  final NeomorphicTheme theme;
+  final NeomorphicTheme theme = getIt<NeomorphicTheme>();
 
   NeomorphicCheckbox(
       {Key key,
         this.isChecked,
-        @required this.theme,
         this.borderRadius = 8.0,
         this.height = _defaultCheckboxDimension,
         this.width = _defaultCheckboxDimension,

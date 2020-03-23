@@ -16,12 +16,11 @@ class NeomorphicRaisedButton extends StatefulWidget {
   final Icon leadingIcon;
   final Icon trailingIcon;
   final Duration pressAnimationDuration;
-  final NeomorphicTheme theme;
+  final NeomorphicTheme theme = getIt<NeomorphicTheme>();
 
   NeomorphicRaisedButton({
     Key key,
     this.label,
-    @required this.theme,
     this.onPressed,
     this.borderRadius = 8.0,
     this.height,

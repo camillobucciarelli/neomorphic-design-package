@@ -1,6 +1,6 @@
 name: neomorphic_design
 description: A set of neomorphic design based widgets.
-version: 0.0.1
+version: 0.0.2
 author: Camillo Bucciarelli
 
 environment:
@@ -9,6 +9,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  get_it: ^4.0.1
 
 dev_dependencies:
   flutter_test:

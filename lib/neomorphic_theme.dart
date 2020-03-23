@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
+
+GetIt getIt = GetIt.instance;
 
 class NeomorphicTheme {
   final Color lightColor;
@@ -11,7 +14,7 @@ class NeomorphicTheme {
   final double shadowOffset;
   final double shadowBlurRadius;
 
-  NeomorphicTheme({
+  NeomorphicTheme._(
     this.lightColor,
     this.darkColor,
     this.baseColor,
@@ -19,7 +22,29 @@ class NeomorphicTheme {
     this.textStyleDark,
     this.textStyleButtonLabel,
     this.textStyleTextField,
-    this.shadowOffset = 5.0,
-    this.shadowBlurRadius = 16.0
-  });
+    this.shadowOffset,
+    this.shadowBlurRadius,
+  );
+
+  static void init({
+    Color lightColor,
+    Color darkColor,
+    Color baseColor,
+    TextStyle textStyleLight,
+    TextStyle textStyleDark,
+    TextStyle textStyleButtonLabel,
+    TextStyle textStyleTextField,
+    double shadowOffset = 5.0,
+    double shadowBlurRadius = 16.0
+  }) => getIt.registerSingleton<NeomorphicTheme>(NeomorphicTheme._(
+      lightColor,
+      darkColor,
+      baseColor,
+      textStyleLight,
+      textStyleDark,
+      textStyleButtonLabel,
+      textStyleTextField,
+      shadowOffset,
+      shadowBlurRadius,
+  ), signalsReady: true);
 }

@@ -53,7 +53,7 @@ class NeomorphicTextFormField extends StatefulWidget {
   final double horizontalPadding;
   final Icon leadingIcon;
   final Icon trailingIcon;
-  final NeomorphicTheme theme;
+  final NeomorphicTheme theme = getIt<NeomorphicTheme>();
 
   NeomorphicTextFormField({
     Key key,
@@ -96,7 +96,6 @@ class NeomorphicTextFormField extends StatefulWidget {
     this.scrollPadding = const EdgeInsets.all(20.0),
     this.enableInteractiveSelection = true,
     this.buildCounter,
-    @required this.theme,
     this.leadingIcon,
     this.trailingIcon,
     this.borderRadius = 8.0,

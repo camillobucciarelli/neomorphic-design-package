@@ -12,12 +12,11 @@ class NeomorphicContainer extends StatelessWidget {
   final double verticalPadding;
   final Alignment alignment;
   final ContainerType containerType;
-  final NeomorphicTheme theme;
+  final NeomorphicTheme theme = getIt<NeomorphicTheme>();
 
   NeomorphicContainer({
     Key key,
     @required this.containerType,
-    @required this.theme,
     this.borderRadius = 8.0,
     this.height,
     this.width,
